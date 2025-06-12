@@ -36,7 +36,6 @@ class Controller:
             # Update objects
             self.niamh.update(dt)
             self.parent_spawner.update(dt)
-            self.niamh.parent_collision_check()
 
             # Draw objects
             self.niamh.draw()
