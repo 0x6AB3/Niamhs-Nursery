@@ -13,22 +13,29 @@ class Parent(Moveable):
             250,
             int(controller.width * 0.75)
         )
-        self.show_bubble = False
         self.bubble = None
+        self.leaving = False
+        self.finished = False
 
     def update(self, dt):
         super().update(dt)
 
-        self.show_bubble = True if self.controller.niamh.x_collision(self) else False
+        if self.x == self.target_x and self.leaving:
+            self.finished = True
 
-        if self.show_bubble:
+        if self.x == self.target_x:
             x = self.x - self.width / 2
             y = self.y - self.height * 1.5
             self.bubble = ParentBubble(self.controller, x, y)
-        else:
+
+        if self.controller.niamh.x_collision(self) and self.bubble is not None:
             self.bubble = None
+            self.leaving = True
+            self.target_x = int(self.controller.width * 1.1)
+            self.controller.niamh.add_baby(1)
+
 
     def draw(self):
         super().draw()
-        if self.show_bubble and self.bubble is not None:
+        if self.bubble is not None:
             self.bubble.draw()

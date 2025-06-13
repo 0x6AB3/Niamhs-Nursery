@@ -11,5 +11,5 @@ class ParentBubble(GameObject):
             y
         )
 
-    def inside(self, x, y):
+    def on_click(self):
         pass

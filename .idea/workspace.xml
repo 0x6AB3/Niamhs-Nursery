@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11e4a9c4-4073-432c-aa2b-c6a9f7f39205" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ParentBubble.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameObject.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameObject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Niamh.py" beforeDir="false" afterPath="$PROJECT_DIR$/Niamh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Parent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParentBubble.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParentBubble.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParentSpawner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParentSpawner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2yKppEyIhooyrJoMJHuyyOPsGpt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,10 +41,12 @@
   "keyToString": {
     "Python.Controller.executor": "Run",
     "Python.GameObject.executor": "Run",
+    "Python.Moveable.executor": "Run",
     "Python.Niamh.executor": "Run",
     "Python.Parent.executor": "Debug",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,18 +77,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749593299951</updated>
-      <workItem from="1749593301009" duration="15281000" />
+      <workItem from="1749593301009" duration="16339000" />
+      <workItem from="1749853183344" duration="880000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NN$Niamh.coverage" NAME="Niamh Coverage Results" MODIFIED="1749596005408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NN$Niamh.coverage" NAME="Niamh Coverage Results" MODIFIED="1749698001134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NN$Parent.coverage" NAME="Parent Coverage Results" MODIFIED="1749691456127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NN$main.coverage" NAME="main Coverage Results" MODIFIED="1749593539827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NN$GameObject.coverage" NAME="GameObject Coverage Results" MODIFIED="1749684136016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NN$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1749697232903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NN$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1749853912540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NN$Moveable.coverage" NAME="Moveable Coverage Results" MODIFIED="1749697363095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

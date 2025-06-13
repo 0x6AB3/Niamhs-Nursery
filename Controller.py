@@ -1,7 +1,7 @@
 import pygame
+
 from Niamh import Niamh
 from ParentSpawner import ParentSpawner
-
 
 class Controller:
     def __init__(self):

@@ -9,6 +9,10 @@ class Niamh(Moveable):
             height,
             controller.width / 10,
             controller.height - height,
-            500)
+            500
+        )
+        self.carrying_baby = False
+        self.carrying_baby_count = 0
 
-
+    def add_baby(self, count):
+        self.carrying_baby += count

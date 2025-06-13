@@ -10,6 +10,9 @@ class ParentSpawner:
         self.controller = controller
 
     def update(self, dt):
+        if self.parent.finished == True:
+            self.parent = None
+
         # Spawn parent if enough time passed and one doesn't exist
         if self.parent is None and self.difference(self.spawned_time, pygame.time.get_ticks()) >= self.interval:
             self.parent = Parent(self.controller)

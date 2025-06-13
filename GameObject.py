@@ -21,7 +21,20 @@ class GameObject:
         collision_left = oxr >= sxl and oxr <= sxr
 
         if collision_left or collision_right:
-            print("collision detected")
             return True
         else:
             return False
+
+    # 'syu' means: self, y-axis, up (top of GameObject)
+    # 'd' for down, 'o' for other, etc
+    def y_collision(self, other):
+        syu, syd = self.y - self.height / 2, self.y + self.height / 2
+        oyu, oyd = other.y - other.height / 2, other.y + other.height / 2
+
+        #collision_up =
+        #collision_down = oxr >= sxl and oxr <= sxr
+
+        #if collision_up or collision_down:
+        #    return True
+        #else:
+        #    return False
