@@ -1,3 +1,5 @@
+from inspect import stack
+
 from Moveable import Moveable
 
 class Niamh(Moveable):
@@ -11,12 +13,17 @@ class Niamh(Moveable):
             controller.height - height,
             500
         )
-        self.carrying_baby = False
-        self.carrying_baby_count = 0
-        self.carrying_baby_limit = 1
+        self.babies = []
+        self.capacity = 1
 
-    def add_baby(self):
-        if self.carrying_baby_count != self.carrying_baby_limit:
-            self.carrying_baby_count += 1
+    def add_baby(self, baby):
+        if len(self.babies) < self.capacity:
+            self.babies.append(baby)
+            baby.pick_up_sound.play()
             return True
         return False
+
+    def remove_baby(self):
+        if len(self.babies) > 0:
+            return self.babies.pop()
+        return None

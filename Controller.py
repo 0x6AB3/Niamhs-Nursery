@@ -1,18 +1,23 @@
 import pygame
 
 from Niamh import Niamh
+from BabyBed import BabyBed
 from ParentSpawner import ParentSpawner
 
 class Controller:
     def __init__(self):
         pygame.init()
+        pygame.mixer.init()
+        pygame.display.set_caption("Niamh's Nursery'")
         self.width = 1200
         self.height = 600
         self.screen = pygame.display.set_mode((self.width,self.height))
         self.clock = pygame.time.Clock()
-        pygame.display.set_caption("Niamh's Nursery'")
+
+        # Game components
         self.niamh = Niamh(self)
         self.parent_spawner = ParentSpawner(self)
+        self.bed = BabyBed(self)
 
     def run(self):
         running = True
@@ -38,8 +43,9 @@ class Controller:
             self.parent_spawner.update(dt)
 
             # Draw objects
-            self.niamh.draw()
+            self.bed.draw()
             self.parent_spawner.draw()
+            self.niamh.draw()
 
             # Update display
             pygame.display.update()

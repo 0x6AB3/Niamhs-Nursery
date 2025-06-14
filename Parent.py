@@ -1,3 +1,6 @@
+import pygame
+
+from Baby import Baby
 from Moveable import Moveable
 from ParentBubble import ParentBubble
 
@@ -16,9 +19,22 @@ class Parent(Moveable):
         self.bubble = None
         self.leaving = False
         self.finished = False
+        self.baby = Baby(self.controller)
+        self.enter_sound = pygame.mixer.Sound("ParentEnter.wav")
+        self.enter_sound_played = False
+        self.leave_sound = pygame.mixer.Sound("ParentLeave.wav")
+        self.leave_sound_played = False
 
     def update(self, dt):
         super().update(dt)
+
+        if not self.enter_sound_played and self.x < self.controller.width:
+            self.enter_sound.play()
+            self.enter_sound_played = True
+
+        if not self.leave_sound_played and self.leaving:
+            self.leave_sound.play()
+            self.leave_sound_played = True
 
         if self.x == self.target_x and self.leaving:
             self.finished = True
@@ -28,7 +44,7 @@ class Parent(Moveable):
             y = self.y - self.height * 1.5
             self.bubble = ParentBubble(self.controller, x, y)
 
-        if self.controller.niamh.x_collision(self) and self.bubble is not None and self.controller.niamh.add_baby():
+        if self.controller.niamh.x_collision(self) and self.bubble is not None and self.controller.niamh.add_baby(self.baby):
             self.bubble = None
             self.leaving = True
             self.target_x = int(self.controller.width * 1.1)
