@@ -14,10 +14,11 @@ class Baby(GameObject):
         )
         self.sleep_start = None
         self.sleep_required = sleep_required
-        self.pick_up_sound = pygame.mixer.Sound("PickUpBaby.wav")  # .wav format works best
+        self.pick_up_sound = pygame.mixer.Sound("PickUpBaby.wav")
+        self.sleep_sound = pygame.mixer.Sound("BabySleep.wav")
 
     def tired(self):
-        if (pygame.time.get_ticks() - self.sleep_time) / 1000 >= self.sleep_required:
+        if (pygame.time.get_ticks() - self.sleep_start) / 1000 >= self.sleep_required:
             return False
         return True
 
@@ -31,4 +32,5 @@ class Baby(GameObject):
         if self.tired:
             bed.add_baby(self)
             self.sleep_start = pygame.time.get_ticks()
+            self.sleep_sound.play()
 

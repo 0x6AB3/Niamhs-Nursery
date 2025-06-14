@@ -15,6 +15,10 @@ class BabyBed(GameObject):
         self.babies = []
         self.capacity = baby_limit
 
+    def add_baby(self, baby):
+        if len(self.babies) < self.capacity:
+            self.babies.append(baby)
+
     def draw(self):
         super().draw()
         collision = self.controller.niamh.x_collision(self)
@@ -22,10 +26,9 @@ class BabyBed(GameObject):
         bed_space = len(self.babies) < self.capacity
         niamh_space = len(self.controller.niamh.babies) < self.controller.niamh.capacity
 
+        # Put 1 baby into the bed
         if collision and carrying and bed_space:
             baby = self.controller.niamh.remove_baby()
-            if baby is None:
-                return
             baby.put_to_sleep(self)
 
         if collision and not carrying and not bed_space and not self.babies[0].tired() and niamh_space:
