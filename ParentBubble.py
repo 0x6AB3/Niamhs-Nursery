@@ -10,6 +10,3 @@ class ParentBubble(GameObject):
             x,
             y
         )
-
-    def on_click(self):
-        pass

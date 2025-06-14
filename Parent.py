@@ -28,11 +28,10 @@ class Parent(Moveable):
             y = self.y - self.height * 1.5
             self.bubble = ParentBubble(self.controller, x, y)
 
-        if self.controller.niamh.x_collision(self) and self.bubble is not None:
+        if self.controller.niamh.x_collision(self) and self.bubble is not None and self.controller.niamh.add_baby():
             self.bubble = None
             self.leaving = True
             self.target_x = int(self.controller.width * 1.1)
-            self.controller.niamh.add_baby(1)
 
 
     def draw(self):

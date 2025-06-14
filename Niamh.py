@@ -13,6 +13,10 @@ class Niamh(Moveable):
         )
         self.carrying_baby = False
         self.carrying_baby_count = 0
+        self.carrying_baby_limit = 1
 
-    def add_baby(self, count):
-        self.carrying_baby += count
+    def add_baby(self):
+        if self.carrying_baby_count != self.carrying_baby_limit:
+            self.carrying_baby_count += 1
+            return True
+        return False
