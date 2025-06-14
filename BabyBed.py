@@ -1,4 +1,5 @@
 import pygame
+from random import randint
 
 from GameObject import GameObject
 
@@ -30,6 +31,7 @@ class BabyBed(GameObject):
 
         if collision and self.collect_money:
             self.collect_money = False
+            self.controller.money += randint(3, 7)
             self.money_sound.play()
 
         # Put 1 baby into the bed

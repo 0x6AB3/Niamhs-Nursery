@@ -8,16 +8,23 @@ class Controller:
     def __init__(self):
         pygame.init()
         pygame.mixer.init()
-        pygame.display.set_caption("Niamh's Nursery'")
+        pygame.display.set_caption("Niamh's Nursery")
+        self.font = pygame.font.SysFont(None, 72)
         self.width = 1200
         self.height = 600
         self.screen = pygame.display.set_mode((self.width,self.height))
         self.clock = pygame.time.Clock()
 
+        self.money = 0
+
         # Game components
         self.niamh = Niamh(self)
         self.parent_spawner = ParentSpawner(self)
         self.bed = BabyBed(self)
+
+    def update_money(self):
+        money_text = self.font.render(f"£{self.money}", True, (255, 255, 0))
+        self.screen.blit(money_text, (0, 0))
 
     def run(self):
         running = True
@@ -46,6 +53,7 @@ class Controller:
             self.bed.draw()
             self.parent_spawner.draw()
             self.niamh.draw()
+            self.update_money()
 
             # Update display
             pygame.display.update()
