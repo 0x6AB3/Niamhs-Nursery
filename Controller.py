@@ -42,6 +42,7 @@ class Controller:
                     new_x = pygame.mouse.get_pos()[0]
                     self.niamh.set_target(new_x)
 
+
             # Background
             self.screen.fill((0,128,255))
 

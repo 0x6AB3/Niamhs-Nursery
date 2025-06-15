@@ -10,7 +10,7 @@ class BabyBed(GameObject):
             color,
             width,
             height,
-            int(controller.width * 0.1),
+            int(controller.width * 0.05),
             controller.height - height
         )
         self.babies = []
