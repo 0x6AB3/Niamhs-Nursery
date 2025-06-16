@@ -9,6 +9,8 @@ class Controller:
         pygame.init()
         pygame.mixer.init()
         pygame.display.set_caption("Niamh's Nursery")
+        programIcon = pygame.image.load('icon.jpg')
+        pygame.display.set_icon(programIcon)
         self.font = pygame.font.SysFont(None, 72)
         self.width = 1200
         self.height = 600
