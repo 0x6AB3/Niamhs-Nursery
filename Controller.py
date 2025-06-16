@@ -18,6 +18,8 @@ class Controller:
         self.money = 0
 
         # Game components
+        self.background_image = pygame.image.load("NurseryBackground.png").convert()
+        self.background_image = pygame.transform.scale(self.background_image, (self.width, self.height*1.2))
         self.niamh = Niamh(self)
         self.parent_spawner = ParentSpawner(self)
         self.bed = BabyBed(self)
@@ -42,9 +44,8 @@ class Controller:
                     new_x = pygame.mouse.get_pos()[0]
                     self.niamh.set_target(new_x)
 
-
             # Background
-            self.screen.fill((0,128,255))
+            self.screen.blit(self.background_image, (0, 0))
 
             # Update objects
             self.niamh.update(dt)
