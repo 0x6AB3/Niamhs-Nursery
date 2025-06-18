@@ -19,12 +19,12 @@ class Niamh(Moveable):
         self.idle_images = []
         self.run_images = []
         for i in range(2):
-            img = pygame.image.load(f"NiamhIdle{i+1}.png").convert_alpha()
+            img = pygame.image.load(f"Images/NiamhIdle{i+1}.png").convert_alpha()
             scaled_img = pygame.transform.scale(img, (img.get_width() * 2, img.get_height() * 2))
             self.idle_images.append(scaled_img)
 
         for i in range(2):
-            img = pygame.image.load(f"NiamhRun{i+1}.png").convert_alpha()
+            img = pygame.image.load(f"Images/NiamhRun{i+1}.png").convert_alpha()
             scaled_img = pygame.transform.scale(img, (img.get_width() * 2, img.get_height() * 2))
             self.run_images.append(scaled_img)
 

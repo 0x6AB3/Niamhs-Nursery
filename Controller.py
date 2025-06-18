@@ -9,8 +9,7 @@ class Controller:
         pygame.init()
         pygame.mixer.init()
         pygame.display.set_caption("Niamh's Nursery")
-        programIcon = pygame.image.load('icon.jpg')
-        pygame.display.set_icon(programIcon)
+        pygame.display.set_icon(pygame.image.load('Images/icon.jpg'))
         self.font = pygame.font.SysFont(None, 72)
         self.width = 1200
         self.height = 600
@@ -20,7 +19,7 @@ class Controller:
         self.money = 0
 
         # Game components
-        self.background_image = pygame.image.load("NurseryBackground.png").convert()
+        self.background_image = pygame.image.load("Images/NurseryBackground.png").convert()
         self.background_image = pygame.transform.scale(self.background_image, (self.width, self.height*1.2))
         self.niamh = Niamh(self)
         self.parent_spawner = ParentSpawner(self)

@@ -20,9 +20,9 @@ class Parent(Moveable):
         self.leaving = False
         self.finished = False
         self.baby = Baby(self.controller)
-        self.enter_sound = pygame.mixer.Sound("ParentEnter.wav")
+        self.enter_sound = pygame.mixer.Sound("Sounds/ParentEnter.wav")
         self.enter_sound_played = False
-        self.leave_sound = pygame.mixer.Sound("ParentLeave.wav")
+        self.leave_sound = pygame.mixer.Sound("Sounds/ParentLeave.wav")
         self.leave_sound_played = False
 
     def update(self, dt):

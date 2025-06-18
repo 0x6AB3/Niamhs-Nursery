@@ -16,7 +16,7 @@ class BabyBed(GameObject):
         self.babies = []
         self.capacity = baby_limit
         self.collect_money = False
-        self.money_sound = pygame.mixer.Sound("Money.wav")
+        self.money_sound = pygame.mixer.Sound("Sounds/Money.wav")
 
     def add_baby(self, baby):
         if len(self.babies) < self.capacity:
